@@ -1,0 +1,32 @@
+
+{{> postDetails post}}
+
+{{#if logged_in}}
+  <form class="comment-form">
+    <div>
+      <textarea name="comment-text"></textarea>
+    </div>
+
+    <div>
+      <button type="submit">Add comment</button>    
+    </div>s
+  </form>
+{{/if}}
+
+<div>
+  {{#each post.comments as |comment|}}
+  <section>
+    <div>
+      {{comment.user.username}} 
+      on {{format_date comment.date_created}}
+    </div>
+    <div>
+      {{comment.comment_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>
+
+{{#if logged_in}}
+    <script src="/comments.js"></script>
+{{/if}}

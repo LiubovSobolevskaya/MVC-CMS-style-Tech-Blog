@@ -7,7 +7,7 @@ router.get('/', withAuth, (req, res) => {
     where: {
       user_id: req.session.user_id
     },
-    attributes: ['id', 'title', 'post_text'],
+    attributes: ['id', 'title', 'post_text', 'date_created'],
     include: [
       {
         model: User,
@@ -15,7 +15,7 @@ router.get('/', withAuth, (req, res) => {
       },
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id'],
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'date_created'],
         include: {
           model: User,
           attributes: ['username']
@@ -24,7 +24,6 @@ router.get('/', withAuth, (req, res) => {
     ]
   })
   .then(postData => {
-    //serialize the data before passing to the template
     const posts = postData.map(post => post.get({ plain: true }));
     res.render('dashboard', { posts, logged_in: true });
   })
@@ -35,6 +34,8 @@ router.get('/', withAuth, (req, res) => {
 });
 
 
-
+router.get('/new', withAuth, (req, res) => {
+  res.render('addpost');
+});
 
 module.exports = router;

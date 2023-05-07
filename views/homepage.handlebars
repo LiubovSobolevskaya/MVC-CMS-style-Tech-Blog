@@ -2,17 +2,8 @@
 <ul class="posts">  
   {{#each posts as |post|}}
   <li>
-    <section>
-        <div>  
-            {{title}}
-            <div>
-                Author: {{user.username}}  
-            </div>
-        </div>
-        <div class="post-text">
-            {{post_text}}
-        </div>
-    </section>
+   {{> postDetails post}}
   </li>
   {{/each}}
 </ul>
+

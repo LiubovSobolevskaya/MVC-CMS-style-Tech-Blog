@@ -7,21 +7,8 @@ router.get('/', (req, res) => {
     attributes: [
       'id',
       'title',
-      "post_text",     
-    ],
-    include: [
-      {
-        model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id'],
-        include: {
-          model: User,
-          attributes: ['username']
-        }
-      },
-      {
-        model: User,
-        attributes: ['username']
-      }
+      'post_text',     
+      'date_created'
     ]
   })
     .then(postData => {
@@ -36,6 +23,45 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
 });
+
+router.get('/post/:id', (req, res) => {
+  Post.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: ['id', 'title', 'post_text', 'date_created'],
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      },
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'date_created'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      }
+    ]
+  })
+    .then(postData => {
+      if (!postData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
+      const post = postData.get({plain:true});
+      res.render('addcomment', {post,  logged_in: req.session.logged_in });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+
+
+
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
