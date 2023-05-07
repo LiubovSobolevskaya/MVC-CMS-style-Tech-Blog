@@ -38,4 +38,42 @@ router.get('/new', withAuth, (req, res) => {
   res.render('addpost');
 });
 
+router.get('/edit/:id', withAuth, (req, res) => {
+  Post.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: ['id', 'title', 'post_text', 'date_created'],
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      },
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'date_created'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      }
+    ]
+  })
+    .then(postData => {
+      if (!postData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
+      const post = postData.get({ plain: true });
+      res.render('updatepost', {
+        post,
+        loggedIn: req.session.loggedIn
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 module.exports = router;
