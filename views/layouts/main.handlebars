@@ -10,23 +10,23 @@
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="posts">🧑‍💻</span>
-        TECHNOBLOG
-      </h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/dashboard">Dashboard</a>
-        {{#if logged_in}}
-            <button class="no-button" id="logout">logout</button>
-        {{else}}
-            <a href="/login">login</a>
-        {{/if}}
+  <div>
+    <header>  
+        <h1 class="bigtitle">
+          <span role="img" aria-label="posts">🧑‍💻</span>
+          TECHBLOG
+        </h1>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/dashboard">Dashboard</a>
+          {{#if logged_in}}
+              <button class="no-button" id="logout">logout</button>
+          {{else}}
+              <a href="/login">login</a>
+          {{/if}}
       </nav>
     </header>
-    <main class="container container-fluid mt-5">
+    <main>
       {{{ body }}}
     </main>
   </div>

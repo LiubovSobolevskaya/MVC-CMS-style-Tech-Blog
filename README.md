@@ -2,10 +2,10 @@
 
 12th Assignment of UCB Extension Web Development Bootcamp
 
-Please visit the [Heroku website]()
-
+Please visit the [Heroku website](https://cmslubatechblog.herokuapp.com/)
 
 ## Desciption
+
 a CMS-style blog site that allows users to create accounts, log in, create blog posts, read existing blog posts, leave comments, and manage their posts.
 
 When a user visits the site for the first time, they are presented with the homepage, which includes existing blog posts (if any), navigation links for the homepage and the dashboard, and the option to log in. Clicking on the homepage link takes the user back to the homepage, while clicking on any other links in the navigation prompts the user to either sign up or sign in.
@@ -18,31 +18,32 @@ Clicking on the dashboard link takes the user to the dashboard, where they can s
 
 Finally, clicking on the logout option in the navigation signs the user out of the site. If the user is idle on the page for more than a set time, they are automatically signed out of the site to ensure security.
 
-______________
+---
 
-## Technology Used 
-   
-* [Git](https://git-scm.com/)   
-* [JavaScript](https://www.javascript.com/)   
-* [Node.js](https://nodejs.dev/)
-* [MySQL](https://www.mysql.com/)
-* [MVC](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
-* [Express.js](https://expressjs.com/)
-* [Heroku](https://heroku.com)
-* [Handlebars.js](https://handlebarsjs.com/)
+## Technology Used
+
+- [Git](https://git-scm.com/)
+- [JavaScript](https://www.javascript.com/)
+- [Node.js](https://nodejs.dev/)
+- [MySQL](https://www.mysql.com/)
+- [MVC](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
+- [Express.js](https://expressjs.com/)
+- [Heroku](https://heroku.com)
+- [Handlebars.js](https://handlebarsjs.com/)
 
 ## Requirements
 
-Using comand line or a tool of your choice run MySQL commands from ```db/schema.sql ```.
-
 Create .env file and add:
+
 ```
 DB_NAME='ecommerce_db'
 DB_USER=<ADD USER HERE>
 DB_PASSWORD=<ADD YOUR PASSWORD HERE>
 ```
-Using comand line or a tool of your choice run MySQL commands from ```db/schema.sql```. 
+
+Using comand line or a tool of your choice run MySQL commands from `db/schema.sql`.
 Run
+
 ```
 npm install
 ```
@@ -50,9 +51,7 @@ npm install
 ## Author Info
 
 ### Liubov Sobolevskaya
-* [LinkedIn](https://www.linkedin.com/in/liubov-sobolevskaya/)
-* [Github](https://github.com/LiubovSobolevskaya)
-* [Kaggle](https://www.kaggle.com/lyubovsobolevskaya)
 
-
-
+- [LinkedIn](https://www.linkedin.com/in/liubov-sobolevskaya/)
+- [Github](https://github.com/LiubovSobolevskaya)
+- [Kaggle](https://www.kaggle.com/lyubovsobolevskaya)
