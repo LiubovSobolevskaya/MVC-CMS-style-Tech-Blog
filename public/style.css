@@ -8,6 +8,19 @@ html {
   background-color: rgb(168, 193, 255);
 }
 
+.posts {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 10px;
+}
+.homepage-posts-title {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 3rem;
+  color: #ff00ff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 20px 0;
+}
 a {
   text-decoration: none;
   color: white;
@@ -65,12 +78,6 @@ header nav {
   transform: rotate(5deg);
 }
 
-.posts {
-  margin: 0;
-  padding: 0;
-  background-color: bisque;
-}
-
 .no-button {
   background: none;
   border: none;
@@ -85,6 +92,7 @@ button {
   background-color: #ff6b6b;
   border: 0;
   padding: 1%;
+  margin: 20px;
   color: white;
   font-weight: bold;
   transition: background-color 0.3s;
@@ -106,6 +114,7 @@ button:hover {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-bottom: 20px;
 }
 
 textarea,
@@ -113,6 +122,7 @@ input {
   padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
+  margin: 20px;
 }
 
 textarea:focus,
@@ -275,10 +285,39 @@ main {
   margin-bottom: 5%;
 }
 
-footer {
-  border-top: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  padding: 1%;
-  font-size: 110%;
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding-bottom: 0.5rem;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+.card-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.card-body {
+  padding: 0.75rem 0;
+}
+
+.card-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  padding-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #6c757d;
 }
