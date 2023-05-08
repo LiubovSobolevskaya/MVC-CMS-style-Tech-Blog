@@ -8,14 +8,14 @@ Comment.init(
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     comment_text: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
-      }
+        len: [1],
+      },
     },
     date_created: {
       type: DataTypes.DATE,
@@ -27,24 +27,24 @@ Comment.init(
       allowNull: false,
       references: {
         model: 'user',
-        key: 'id'
-      }
+        key: 'id',
+      },
     },
     post_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: 'post',
-        key: 'id'
-      }
-    }
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     timestamps: false,
     underscored: true,
-    modelName: 'comment'
+    modelName: 'comment',
   }
 );
 

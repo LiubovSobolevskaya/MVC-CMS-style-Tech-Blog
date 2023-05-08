@@ -28,25 +28,3 @@ async function editFormHandler(event) {
 document
   .querySelector('#editpost-form')
   .addEventListener('submit', editFormHandler);
-
-var idleTimer;
-function resetIdleTimer() {
-  clearTimeout(idleTimer);
-  idleTimer = setTimeout(logoutUser, idleThreshold);
-}
-
-document.addEventListener('mousemove', resetIdleTimer);
-document.addEventListener('keydown', resetIdleTimer);
-
-async function logoutUser() {
-  const response = await fetch('/api/users/logout', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-  });
-
-  if (response.ok) {
-    document.location.replace('/');
-  } else {
-    alert(response.statusText);
-  }
-}
