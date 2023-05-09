@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// Get all posts for the logged-in user
 router.get('/', withAuth, (req, res) => {
   Post.findAll({
     where: {
@@ -39,12 +40,14 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+// Render the add post page
 router.get('/new', withAuth, (req, res) => {
   res.render('addpost', {
     logged_in: true
   });
 });
 
+// Render the edit post page
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {

@@ -2,6 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 
+// Get all posts and associated comments and users
 router.get('/', (req, res) => {
   Post.findAll({
     attributes: ['id', 'title', 'post_text', 'date_created'],
@@ -36,6 +37,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// Get a specific post and its associated comments and user
 router.get('/post/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -77,6 +79,7 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+// Render the login page
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
