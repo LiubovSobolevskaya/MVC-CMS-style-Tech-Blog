@@ -20,6 +20,10 @@ Finally, clicking on the logout option in the navigation signs the user out of t
 
 ---
 
+## Appearance
+
+![](assets/gif.gif)
+
 ## Technology Used
 
 - [Git](https://git-scm.com/)
@@ -41,8 +45,13 @@ DB_USER=<ADD USER HERE>
 DB_PASSWORD=<ADD YOUR PASSWORD HERE>
 ```
 
-Using comand line or a tool of your choice run MySQL commands from `db/schema.sql`.
-Run
+and create a database on your machine.
+
+or
+
+```
+JAWSDB_URL = <YOUR LINK>
+```
 
 ```
 npm install
