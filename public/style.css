@@ -1,409 +1,412 @@
 body,
 html {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: 'Comic Sans MS', cursive;
-  color: rgb(64, 0, 255);
-  background-color: rgb(168, 193, 255);
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    color: rgb(64, 0, 255);
+    background-color: rgb(168, 193, 255);
 }
 
 .posts {
-  list-style-type: none;
-  text-decoration: none;
-  margin: 10px;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 10px;
 }
+
 .homepage-posts-title {
-  font-family: 'Comic Sans MS', cursive;
-  font-size: 3rem;
-  color: #5500ff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  margin: 20px 0;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 3rem;
+    color: #5500ff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 20px 0;
 }
+
 a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: color 0.1s;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.1s;
 }
 
 header a:hover {
-  color: lightgrey;
+    color: lightgrey;
 }
 
 header {
-  text-align: left;
-  padding-bottom: 20px;
-  background-color: var(--third-color);
+    text-align: left;
+    padding-bottom: 20px;
+    background-color: var(--third-color);
 }
 
 header h1 {
-  display: inline-block;
-  font-size: 48px;
-  color: white;
+    display: inline-block;
+    font-size: 48px;
+    color: white;
 }
 
 header nav {
-  margin-right: 20px;
-  float: right;
-  font-size: 20px;
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
 }
 
 .main-div {
-  width: 100%;
-  min-height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .bigtitle {
-  font-size: 3rem;
-  color: white;
-  background-color: #ff6b6b;
-  padding: 10px;
-  display: inline-block;
-  border-radius: 50%;
-  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.3);
-  font-family: 'Comic Sans MS', cursive;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transform: rotate(-5deg);
-  transition: transform 0.3s ease-in-out;
+    font-size: 3rem;
+    color: white;
+    background-color: #ff6b6b;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Comic Sans MS', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease-in-out;
 }
 
 .bigtitle:hover {
-  transform: rotate(5deg);
+    transform: rotate(5deg);
 }
 
 .form-container {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
 /* Styling for the login and signup forms */
 .login-form,
 .signup-form {
-  width: 300px;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f7f7f7;
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
 }
 
 .login-form,
 .signup-form h2 {
-  text-align: center;
-  color: #333;
+    text-align: center;
+    color: #333;
 }
 
 label {
-  display: block;
-  margin: 10px;
-  color: #555;
+    display: block;
+    margin: 10px;
+    color: #555;
 }
 
 input[type='text'],
 input[type='password'] {
-  display: block;
-  width: 90%;
-  margin: 5px auto;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button[type='submit'] {
-  display: block;
-  width: 90%;
-  margin: 15px auto;
-  border: none;
-  border-radius: 4px;
-  background-color: #4caf50;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 button[type='submit']:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
 .addpost {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .addpost h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 #new-post {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #new-post .label {
-  margin-bottom: 5px;
-  color: #555;
-  font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
 }
 
 #new-post input[type='text'],
 textarea {
-  display: block;
-  margin: 0 auto;
-  width: 90%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #435d08;
-  text-decoration: none;
-  font-size: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    font-size: 100%;
+    box-shadow: none;
 }
 
 button {
-  background-color: #ff6b6b;
-  border: 0;
-  padding: 1%;
-  margin: 20px;
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  cursor: pointer;
-  border-radius: 50px;
-  font-family: 'Comic Sans MS', cursive;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  animation: bounce 0.4s infinite alternate;
+    background-color: #ff6b6b;
+    border: 0;
+    padding: 1%;
+    margin: 20px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: 'Comic Sans MS', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: bounce 0.4s infinite alternate;
 }
 
 button:hover {
-  background-color: #ff4d4d;
-  animation: none;
+    background-color: #ff4d4d;
+    animation: none;
 }
 
 .post-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 20px;
 }
 
 textarea,
 input {
-  padding: 0.5%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin: 20px;
+    padding: 0.5%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 20px;
 }
 
 textarea:focus,
 input:focus {
-  outline: none;
-  border: 1px solid #3486eb;
+    outline: none;
+    border: 1px solid #3486eb;
 }
 
 textarea {
-  min-width: 40%;
-  min-height: 100px;
+    min-width: 40%;
+    min-height: 100px;
 }
 
-form > div {
-  margin-bottom: 2%;
+form>div {
+    margin-bottom: 2%;
 }
 
 form label {
-  display: block;
+    display: block;
 }
 
 .wrapper {
-  width: 100%;
-  min-height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-  background-color: #ffbe0b;
-  border-bottom: 1px solid #ff8c00;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1% 2%;
-  font-size: 2rem;
-  font-family: 'Comic Sans MS', cursive;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #ffbe0b;
+    border-bottom: 1px solid #ff8c00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2%;
+    font-size: 2rem;
+    font-family: 'Comic Sans MS', cursive;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-  margin: 0;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #ff8c00;
-  color: white;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ff8c00;
+    color: white;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header h1 span {
-  display: inline-block;
-  animation: rotate 2s infinite;
+    display: inline-block;
+    animation: rotate 2s infinite;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 main {
-  flex: 1;
-  padding: 2% 4%;
-  background-color: gainsboro;
+    flex: 1;
+    padding: 2% 4%;
+    background-color: gainsboro;
 }
 
 .btn-no-style {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-decoration: none;
-  color: #225ca3;
-  font-size: 100%;
-  font-weight: bold;
-  transition: color 0.1s;
-  margin-left: 16px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #225ca3;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color 0.1s;
+    margin-left: 16px;
 }
 
 .btn-no-style:hover {
-  background: none;
-  color: #3486eb;
+    background: none;
+    color: #3486eb;
 }
 
 .delete-post-btn {
-  background-color: #d41414;
+    background-color: #d41414;
 }
 
 .delete-post-btn:hover {
-  background-color: #ff643d;
+    background-color: #ff643d;
 }
 
 .post {
-  background-color: lightskyblue;
-  margin-bottom: 2%;
-  line-height: 150%;
-  border-color: black;
-  border: solid;
+    background-color: lightskyblue;
+    margin-bottom: 2%;
+    line-height: 150%;
+    border-color: black;
+    border: solid;
 }
 
 .post-head {
-  padding: 2px;
+    padding: 2px;
 }
 
 .title {
-  font-size: 150%;
-  margin: 2px;
+    font-size: 150%;
+    margin: 2px;
 }
 
 .meta {
-  font-style: italic;
-  font-size: 80%;
-  margin: 2px;
+    font-style: italic;
+    font-size: 80%;
+    margin: 2px;
 }
 
 .post-text {
-  background-color: whitesmoke;
-  padding: 3px;
+    background-color: whitesmoke;
+    padding: 3px;
 }
 
 .edit-link {
-  display: block;
-  margin: -1.5% 0 2% 0;
+    display: block;
+    margin: -1.5% 0 2% 0;
 }
 
 .comment-form {
-  margin-bottom: 5%;
+    margin-bottom: 5%;
 }
 
 .comment {
-  padding: 1%;
-  margin-bottom: 1%;
+    padding: 1%;
+    margin-bottom: 1%;
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+    background-color: #fff5eb;
 }
 
 .comment .meta {
-  font-size: 90%;
-  margin-bottom: 0.5%;
-  opacity: 0.6;
+    font-size: 90%;
+    margin-bottom: 0.5%;
+    opacity: 0.6;
 }
 
 .new-post-form input {
-  width: 300px;
+    width: 300px;
 }
 
 .edit-post-form {
-  margin-bottom: 5%;
+    margin-bottom: 5%;
 }
 
 .card {
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .card-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding-bottom: 0.5rem;
 }
 
 .card-title {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .card-link {
-  color: #007bff;
-  text-decoration: none;
+    color: #007bff;
+    text-decoration: none;
 }
 
 .card-link:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .card-body {
-  padding: 0.75rem 0;
+    padding: 0.75rem 0;
 }
 
 .card-footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
-  padding-top: 0.5rem;
-  font-size: 0.875rem;
-  color: #6c757d;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    padding-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #6c757d;
 }

@@ -40,7 +40,9 @@ router.get('/', withAuth, (req, res) => {
 });
 
 router.get('/new', withAuth, (req, res) => {
-  res.render('addpost');
+  res.render('addpost', {
+    logged_in: true
+  });
 });
 
 router.get('/edit/:id', withAuth, (req, res) => {

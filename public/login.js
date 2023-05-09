@@ -8,14 +8,14 @@ const loginFormHandler = async (event) => {
 
     const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({username, password }),
+      body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      alert('Failed to log in.');
     }
   }
 };
@@ -29,14 +29,14 @@ const signupFormHandler = async (event) => {
   if (username && password) {
     const response = await fetch('/api/users', {
       method: 'POST',
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ name, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      alert('Failed to sign up.');
     }
   }
 };

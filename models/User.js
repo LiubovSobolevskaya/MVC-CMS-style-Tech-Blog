@@ -19,11 +19,18 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
+      validate: {
+        isAlphanumeric: true,
+      },
+
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: [5],
+      },
     }
   },
   {
@@ -36,7 +43,7 @@ User.init(
         updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
         return updatedUserData;
       }
-    },  
+    },
 
     sequelize,
     timestamps: false,

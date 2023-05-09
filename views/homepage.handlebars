@@ -2,7 +2,23 @@
 <ul class="posts">  
   {{#each posts as |post|}}
   <li>
-   {{> postDetails post}}
+  <div class="card">
+  <div class="card-header">
+    <div class="card-title">
+
+      {{#if ../logged_in}}
+      <a class="card-link" href="/post/{{id}}">{{title}}</a>
+      {{else}}
+        <a class="card-link" href="/login">{{title}}</a> 
+      {{/if}}
+    </div>
+  </div>
+  <div class="card-footer">
+    Author: {{user.username}} on {{format_date date_created}} |
+    {{comments.length}} {{format_plural "comment" comments.length}}
+  </div>
+</div>
+
   </li>
   {{/each}}
 </ul>
