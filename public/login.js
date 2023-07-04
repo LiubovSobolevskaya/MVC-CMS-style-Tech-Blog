@@ -19,6 +19,7 @@ const loginFormHandler = async (event) => {
       // Redirect to the dashboard after successful login
       document.location.replace('/dashboard');
     } else {
+      const result = await response.json();
       // Display an alert if login fails
       alert('Failed to log in.');
     }
@@ -32,8 +33,7 @@ const signupFormHandler = async (event) => {
   // Get the username and password from the signup form inputs
   const username = document.querySelector('#username-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
-  console.log(username);
-  console.log(password);
+
 
   if (username && password) {
     // Send a POST request to the users route to create a new user

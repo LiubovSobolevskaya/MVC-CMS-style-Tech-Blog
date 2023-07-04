@@ -1,7 +1,5 @@
 # CMS style Tech Blog
 
-12th Assignment of UCB Extension Web Development Bootcamp
-
 Please visit the [Heroku website](https://cmslubatechblog.herokuapp.com/)
 
 ## Desciption
@@ -12,7 +10,7 @@ When a user visits the site for the first time, they are presented with the home
 
 If the user chooses to sign up, they are prompted to create a username and password, and once they click on the sign-up button, their credentials are saved, and they are logged into the site. On subsequent visits, when the user chooses to sign in, they are prompted to enter their username and password.
 
-Once a user is signed in, they see navigation links for the homepage, the dashboard, and the option to log out. Clicking on the homepage link takes the user to the homepage, where they can see existing blog posts that include the post title and the date created. Clicking on an existing blog post takes the user to a page displaying the post title, contents, post creator's username, and date created, and allows them to leave a comment. If the user enters a comment and clicks on the submit button while signed in, the comment is saved, and the post is updated to display the comment, the comment creator's username, and the date created.
+Once a user is signed in, they see navigation links for the homepage, the dashboard, and the option to log out. Clicking on the homepage link takes the user to the homepage, where they can see existing blog posts that include the post title and the date created. Clicking on an dexisting blog post takes the user to a page displaying the post title, contents, post creator's username, and date created, and allows them to leave a comment. If the user enters a comment and clicks on the submit button while signed in, the comment is saved, and the post is updated to display the comment, the comment creator's username, and the date created.
 
 Clicking on the dashboard link takes the user to the dashboard, where they can see any blog posts they have already created, and the option to add a new blog post. Clicking on the button to add a new blog post prompts the user to enter both a title and contents for their blog post. Clicking on the button to create a new blog post saves the title and contents of the post and takes the user back to an updated dashboard with their new blog post. Clicking on one of the user's existing posts in the dashboard allows them to delete or update their post and returns them to an updated dashboard.
 
@@ -40,7 +38,7 @@ Finally, clicking on the logout option in the navigation signs the user out of t
 Create .env file and add:
 
 ```
-DB_NAME='ecommerce_db'
+DB_NAME=<ADD DB NAME HERE>
 DB_USER=<ADD USER HERE>
 DB_PASSWORD=<ADD YOUR PASSWORD HERE>
 ```
